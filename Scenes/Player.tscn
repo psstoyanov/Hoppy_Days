@@ -45,9 +45,9 @@ _sections_unfolded = [ "Resource" ]
 input_pickable = false
 collision_layer = 2
 collision_mask = 1
-collision/safe_margin = 0.08
+collision/safe_margin = 0.5
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Transform" ]
+_sections_unfolded = [ "Collision", "Material", "Pause", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -56,7 +56,7 @@ __meta__ = {
 
 position = Vector2( 0, 24 )
 shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
 
