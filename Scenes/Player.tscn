@@ -12,7 +12,7 @@
 
 custom_solver_bias = 0.0
 radius = 59.219
-height = 36.0396
+height = 28.9286
 
 [sub_resource type="SpriteFrames" id=2]
 
@@ -37,15 +37,16 @@ animations = [ {
 "name": "jump",
 "speed": 5.0
 } ]
+_sections_unfolded = [ "Resource" ]
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
-position = Vector2( 191.64, 391.007 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -55,11 +56,14 @@ __meta__ = {
 position = Vector2( 0, 24 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
 
 frames = SubResource( 2 )
-animation = "run"
+animation = "idle"
 frame = 1
 playing = true
 

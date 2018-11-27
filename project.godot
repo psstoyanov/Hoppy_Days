@@ -11,8 +11,12 @@ config_version=3
 [application]
 
 config/name="Hoppy_Days"
-run/main_scene="res://Scenes/Player.tscn"
+run/main_scene="res://Scenes/Levels/Level1.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/height=800
 
 [input]
 
