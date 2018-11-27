@@ -1,0 +1,213 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://GFX/Environment/ground_cake.png" type="Texture" id=1]
+[ext_resource path="res://GFX/Environment/ground_sand.png" type="Texture" id=2]
+[ext_resource path="res://GFX/Environment/ground_snow.png" type="Texture" id=3]
+[ext_resource path="res://GFX/Environment/ground_grass.png" type="Texture" id=4]
+[ext_resource path="res://GFX/Environment/ground_cake_small.png" type="Texture" id=5]
+[ext_resource path="res://GFX/Environment/ground_sand_small.png" type="Texture" id=6]
+[ext_resource path="res://GFX/Environment/ground_snow_small.png" type="Texture" id=7]
+[ext_resource path="res://GFX/Environment/ground_grass_small.png" type="Texture" id=8]
+
+[node name="Platforms" type="Node2D"]
+
+[node name="Ground_Cake" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground_Cake" index="0"]
+
+input_pickable = false
+collision_layer = 2
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground_Cake/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -173.398, -46.7082, -180.721, -44.7698, -187.182, -38.9547, -189.551, -32.7089, -189.982, -14.1868, -163.707, 41.1641, -158.968, 46.333, -101.033, 45.0408, 153.753, 35.9951, 158.932, 34.519, 163.502, 30.3304, 189.649, -14.8562, 189.649, -34.2763, 185.587, -41.1304, 180.51, -45.5729, 174.671, -46.8422 )
+
+[node name="Ground_Sand" type="Sprite" parent="." index="1"]
+
+position = Vector2( 825.329, 2.83424 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground_Sand" index="0"]
+
+input_pickable = false
+collision_layer = 2
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground_Sand/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -173.398, -46.7082, -180.721, -44.7698, -187.182, -38.9547, -189.551, -32.7089, -189.982, -14.1868, -163.707, 41.1641, -158.968, 46.333, -101.033, 45.0408, 153.753, 35.9951, 158.932, 34.519, 163.502, 30.3304, 189.649, -14.8562, 189.649, -34.2763, 185.587, -41.1304, 180.51, -45.5729, 174.671, -46.8422 )
+
+[node name="Ground_Snow" type="Sprite" parent="." index="2"]
+
+position = Vector2( 1226.09, 2.83424 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground_Snow" index="0"]
+
+input_pickable = false
+collision_layer = 2
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground_Snow/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -173.398, -46.7082, -180.721, -44.7698, -187.182, -38.9547, -189.551, -32.7089, -189.982, -14.1868, -163.707, 41.1641, -158.968, 46.333, -101.033, 45.0408, 153.753, 35.9951, 158.932, 34.519, 163.502, 30.3304, 189.649, -14.8562, 189.649, -34.2763, 185.587, -41.1304, 180.51, -45.5729, 174.671, -46.8422 )
+
+[node name="Ground_Grass" type="Sprite" parent="." index="3"]
+
+position = Vector2( 421.734, -1.1337 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground_Grass" index="0"]
+
+input_pickable = false
+collision_layer = 2
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground_Grass/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -173.398, -46.7082, -180.721, -44.7698, -187.182, -38.9547, -189.551, -32.7089, -189.982, -14.1868, -163.707, 41.1641, -158.968, 46.333, -101.033, 45.0408, 153.753, 35.9951, 158.932, 34.519, 163.502, 30.3304, 189.649, -14.8562, 189.649, -34.2763, 185.587, -41.1304, 180.51, -45.5729, 174.671, -46.8422 )
+
+[node name="Ground_Cake_Small" type="Sprite" parent="." index="4"]
+
+position = Vector2( 0.488937, 162.808 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground_Cake_Small" index="0"]
+
+input_pickable = false
+collision_layer = 2
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground_Cake_Small/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -85.213, -49.8425, -92.3367, -46.6298, -97.0858, -41.741, -99.1811, -35.4553, -99.6001, -16.5984, -79.6173, 37.699, -76.5527, 39.9725, -72.6416, 41.3693, 67.0572, 49.9853, 72.6823, 50.0089, 74.9887, 48.432, 78.1425, 44.4074, 79.7194, 39.206, 100.514, -16.9053, 100.506, -25.9738, 100.244, -37.5145, 95.2603, -44.5963, 87.9162, -50.3667 )
+
+[node name="Ground_Sand_Small" type="Sprite" parent="." index="5"]
+
+position = Vector2( 825.818, 165.075 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground_Sand_Small" index="0"]
+
+input_pickable = false
+collision_layer = 2
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground_Sand_Small/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -85.213, -49.8425, -92.3367, -46.6298, -97.0858, -41.741, -99.1811, -35.4553, -99.6001, -16.5984, -79.6173, 37.699, -76.5527, 39.9725, -72.6416, 41.3693, 67.0572, 49.9853, 72.6823, 50.0089, 74.9887, 48.432, 78.1425, 44.4074, 79.7194, 39.206, 100.514, -16.9053, 100.506, -25.9738, 100.244, -37.5145, 95.2603, -44.5963, 87.9162, -50.3667 )
+
+[node name="Ground_Snow_Small" type="Sprite" parent="." index="6"]
+
+position = Vector2( 1226.01, 165.075 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground_Snow_Small" index="0"]
+
+input_pickable = false
+collision_layer = 2
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground_Snow_Small/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -85.213, -49.8425, -92.3367, -46.6298, -97.0858, -41.741, -99.1811, -35.4553, -99.6001, -16.5984, -79.6173, 37.699, -76.5527, 39.9725, -72.6416, 41.3693, 67.0572, 49.9853, 72.6823, 50.0089, 74.9887, 48.432, 78.1425, 44.4074, 79.7194, 39.206, 100.514, -16.9053, 100.506, -25.9738, 100.244, -37.5145, 95.2603, -44.5963, 87.9162, -50.3667 )
+
+[node name="Ground_Grass_Small" type="Sprite" parent="." index="7"]
+
+position = Vector2( 422.223, 163.375 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground_Grass_Small" index="0"]
+
+input_pickable = false
+collision_layer = 2
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground_Grass_Small/StaticBody2D" index="0"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -85.213, -49.8425, -92.3367, -46.6298, -97.0858, -41.741, -99.1811, -35.4553, -99.6001, -16.5984, -79.6173, 37.699, -76.5527, 39.9725, -72.6416, 41.3693, 67.0572, 49.9853, 72.6823, 50.0089, 74.9887, 48.432, 78.1425, 44.4074, 79.7194, 39.206, 100.514, -16.9053, 100.506, -25.9738, 100.244, -37.5145, 95.2603, -44.5963, 87.9162, -50.3667 )
+
+
