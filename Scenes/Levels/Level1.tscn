@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scripts/GameState.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://SFX/pain.ogg" type="AudioStream" id=14]
 [ext_resource path="res://Scripts/PainSFX.gd" type="Script" id=15]
 [ext_resource path="res://Scenes/SpikeMan.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/Cloud.tscn" type="PackedScene" id=17]
 
 [node name="Level1" type="Node2D"]
 
@@ -138,17 +139,14 @@ frame = 2
 [node name="Coin8" parent="Coins" index="3" instance=ExtResource( 9 )]
 
 position = Vector2( 1185.76, 1671.8 )
-frame = 3
 
 [node name="Coin9" parent="Coins" index="4" instance=ExtResource( 9 )]
 
 position = Vector2( 1982.81, 1743.31 )
-frame = 3
 
 [node name="Coin10" parent="Coins" index="5" instance=ExtResource( 9 )]
 
 position = Vector2( 2452.09, 1744.8 )
-frame = 3
 
 [node name="Coin11" parent="Coins" index="6" instance=ExtResource( 9 )]
 
@@ -188,7 +186,6 @@ position = Vector2( 2814.99, 585.059 )
 [node name="Coin25" parent="Coins" index="14" instance=ExtResource( 9 )]
 
 position = Vector2( 2814.99, 585.059 )
-frame = 3
 
 [node name="Coin16" parent="Coins" index="15" instance=ExtResource( 9 )]
 
@@ -209,7 +206,6 @@ position = Vector2( 2081.52, 1020.21 )
 [node name="Coin20" parent="Coins" index="19" instance=ExtResource( 9 )]
 
 position = Vector2( 2103.95, 1078.53 )
-frame = 3
 
 [node name="Coin21" parent="Coins" index="20" instance=ExtResource( 9 )]
 
@@ -229,12 +225,10 @@ frame = 2
 [node name="Coin4" parent="Coins" index="23" instance=ExtResource( 9 )]
 
 position = Vector2( 947.396, 533.597 )
-frame = 3
 
 [node name="Coin5" parent="Coins" index="24" instance=ExtResource( 9 )]
 
 position = Vector2( 770.11, 524.658 )
-frame = 3
 
 [node name="Node2D" type="Node2D" parent="." index="4"]
 
@@ -298,5 +292,13 @@ position = Vector2( 1516.32, 1398.57 )
 [node name="SpikeMan3" parent="NPCs" index="2" instance=ExtResource( 16 )]
 
 position = Vector2( 2422.96, 181.014 )
+
+[node name="Cloud" parent="NPCs" index="3" instance=ExtResource( 17 )]
+
+position = Vector2( 676.936, 258.624 )
+
+[node name="Cloud2" parent="NPCs" index="4" instance=ExtResource( 17 )]
+
+position = Vector2( 1953.68, 1360.08 )
 
 
