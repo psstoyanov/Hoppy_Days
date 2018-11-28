@@ -14,6 +14,7 @@ func _ready():
 
 func hurt():
 	motion.y = JUMP_SPEED
+	Global.PainSFX.play()
 
 func _physics_process(delta):
 	update_motion(delta)
@@ -50,3 +51,4 @@ func fall(delta):
 func jump():
 	if Input.is_action_just_pressed("ui_up") and is_on_floor():
 		motion.y = JUMP_SPEED
+		Global.JumpSFX.play()
