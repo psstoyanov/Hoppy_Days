@@ -1,15 +1,18 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/PlatformTiles.tres" type="TileSet" id=3]
+[ext_resource path="res://Scenes/SpikesTop.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/SpikesBottom.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Spike_bottom.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Spike_top.tscn" type="PackedScene" id=7]
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" index="0"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
 position = Vector2( 78.6406, 486.024 )
-world_limit = 3000
 
 [node name="Camera2D" parent="Player" index="2" instance=ExtResource( 2 )]
 
@@ -34,10 +37,69 @@ cell_clip_uv = false
 collision_use_kinematic = false
 collision_friction = 1.0
 collision_bounce = 0.0
-collision_layer = 1
+collision_layer = 2
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 196627, 7, 0, 262178, 7, 0, 262180, 7, 0, 262182, 7, 0, 262183, 7, 0, 393240, 7, 0, 458785, 7, 0, 589834, 7, 0, 589836, 7, 0, 589837, 7, 0, 720893, 3, 0, 655390, 7, 0, 786459, 7, 0, 917523, 7, 0, 917525, 7, 0, 917527, 7, 0, 917528, 7, 0, 983057, 7, 0, 983059, 7, 0, 1048591, 7, 0, 1048625, 7, 0, 1114114, 3, 0, 1114119, 3, 0, 1114124, 3, 0, 1114127, 7, 0, 1179678, 7, 0, 1376296, 7, 0, 1376297, 7, 0, 1376298, 7, 0, 1376299, 7, 0, 1376300, 7, 0, 1441844, 7, 0, 1507349, 7, 0, 1507350, 7, 0, 1507351, 7, 0, 1507352, 7, 0, 1572870, 3, 0, 1703931, 3, 0, 1703986, 7, 0, 1835038, 3, 0, 1835039, 3, 0, 1835040, 3, 0, 1835041, 3, 0, 1835042, 3, 0, 1835043, 3, 0, 1835052, 7, 0, 1966105, 7, 0, 1966106, 7, 0, 2031616, 3, 0, 2031617, 3, 0, 2031618, 3, 0, 2031619, 3, 0, 2031620, 3, 0, 2031621, 3, 0, 2097157, 3, 0, 2097158, 3, 0, 2097159, 3, 0, 2097160, 3, 0, 2097161, 3, 0, 2097162, 3, 0, 2097163, 3, 0, 2097164, 3, 0, 2097165, 3, 0, 2097166, 3, 0, 2097167, 3, 0, 2097168, 3, 0, 2162704, 3, 0, 2162705, 3, 0, 2162706, 3, 0, 2162707, 3, 0 )
+tile_data = PoolIntArray( 196627, 7, 0, 262178, 7, 0, 262180, 7, 0, 262182, 7, 0, 262183, 7, 0, 393240, 7, 0, 458785, 7, 0, 589834, 7, 0, 589836, 7, 0, 589837, 7, 0, 720893, 3, 0, 655390, 7, 0, 786459, 7, 0, 917523, 7, 0, 917525, 7, 0, 917527, 7, 0, 917528, 7, 0, 983057, 7, 0, 983059, 7, 0, 1048591, 7, 0, 1048625, 7, 0, 1114114, 3, 0, 1114119, 3, 0, 1114124, 3, 0, 1114127, 7, 0, 1179678, 7, 0, 1376254, 7, 0, 1376296, 7, 0, 1376297, 7, 0, 1376298, 7, 0, 1376299, 7, 0, 1376300, 7, 0, 1441844, 7, 0, 1507349, 7, 0, 1507350, 7, 0, 1507351, 7, 0, 1507352, 7, 0, 1572870, 3, 0, 1703931, 3, 0, 1703986, 7, 0, 1835038, 3, 0, 1835039, 3, 0, 1835040, 3, 0, 1835041, 3, 0, 1835042, 3, 0, 1835043, 3, 0, 1835052, 7, 0, 1966105, 7, 0, 1966106, 7, 0, 2031616, 3, 0, 2031617, 3, 0, 2031618, 3, 0, 2031619, 3, 0, 2031620, 3, 0, 2031621, 3, 0, 2097157, 3, 0, 2097158, 3, 0, 2097159, 3, 0, 2097160, 3, 0, 2097161, 3, 0, 2097162, 3, 0, 2097163, 3, 0, 2097164, 3, 0, 2097165, 3, 0, 2097166, 3, 0, 2097167, 3, 0, 2097168, 3, 0, 2162704, 3, 0, 2162705, 3, 0, 2162706, 3, 0, 2162707, 3, 0 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="Spikes" type="Node2D" parent="." index="2"]
+
+[node name="SpikesTop" parent="Spikes" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( 640.125, 1062.24 )
+
+[node name="SpikesTop5" parent="Spikes" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 550.359, 1961.7 )
+
+[node name="SpikesTop6" parent="Spikes" index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 935.432, 2025.41 )
+
+[node name="SpikesTop7" parent="Spikes" index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 2175.95, 1769.45 )
+
+[node name="SpikesTop2" parent="Spikes" index="4" instance=ExtResource( 4 )]
+
+position = Vector2( 1399.53, 870.71 )
+
+[node name="SpikesTop3" parent="Spikes" index="5" instance=ExtResource( 4 )]
+
+position = Vector2( 2412.38, 230.353 )
+
+[node name="SpikesTop4" parent="Spikes" index="6" instance=ExtResource( 4 )]
+
+position = Vector2( 2626.15, 1323.2 )
+
+[node name="SpikesBottom" parent="Spikes" index="7" instance=ExtResource( 5 )]
+
+position = Vector2( 744.727, 697.036 )
+
+[node name="SpikesBottom2" parent="Spikes" index="8" instance=ExtResource( 5 )]
+
+position = Vector2( 516.721, 1201.52 )
+
+[node name="SpikesBottom3" parent="Spikes" index="9" instance=ExtResource( 5 )]
+
+position = Vector2( 613.669, 1201.52 )
+
+[node name="SpikesBottom4" parent="Spikes" index="10" instance=ExtResource( 5 )]
+
+position = Vector2( 1089.43, 1208.7 )
+
+[node name="Spike_bottom" parent="Spikes" index="11" instance=ExtResource( 6 )]
+
+position = Vector2( 201.183, 1217.56 )
+
+[node name="Spike_top" parent="Spikes" index="12" instance=ExtResource( 7 )]
+
+position = Vector2( 1578.21, 341.298 )
+
+[node name="Spike_top2" parent="Spikes" index="13" instance=ExtResource( 7 )]
+
+position = Vector2( 2087.49, 600.026 )
 
 

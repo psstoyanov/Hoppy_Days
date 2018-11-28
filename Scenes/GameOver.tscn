@@ -21,7 +21,7 @@ use_filter = false
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Font/fallback", "Resource", "Settings" ]
 
-[node name="GameOver" type="Control" index="0"]
+[node name="GameOver" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -90,15 +90,16 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "custom_fonts" ]
 
-[node name="TextureButton" type="TextureButton" parent="." index="2"]
+[node name="TextureButton" type="TextureButton" parent="CenterContainer" index="1"]
 
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -52.0
-margin_top = -142.0
-margin_right = 52.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 446.0
+margin_top = 424.0
+margin_right = 550.0
+margin_bottom = 566.0
 rect_min_size = Vector2( 104, 142 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -115,7 +116,7 @@ texture_normal = ExtResource( 4 )
 expand = true
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Pause", "Rect", "Size Flags", "Textures", "Theme", "Visibility" ]
 
-[node name="Label2" type="Label" parent="TextureButton" index="0"]
+[node name="Label2" type="Label" parent="CenterContainer/TextureButton" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -138,6 +139,6 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="CenterContainer/TextureButton" to="." method="_on_TextureButton_pressed"]
 
 
