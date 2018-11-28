@@ -42,7 +42,7 @@ func run():
 
 func fall(delta):
 	if is_on_floor() or is_on_ceiling():
-		motion.y = 0
+		motion.y = 10
 	else:
 		motion.y += GRAVITY * delta
 	
