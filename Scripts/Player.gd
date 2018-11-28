@@ -12,6 +12,9 @@ export var world_limit = 3000
 func _ready():
 	Global.Player = self
 
+func hurt():
+	motion.y = JUMP_SPEED
+
 func _physics_process(delta):
 	update_motion(delta)
 	
@@ -47,4 +50,3 @@ func fall(delta):
 func jump():
 	if Input.is_action_just_pressed("ui_up") and is_on_floor():
 		motion.y = JUMP_SPEED
-		

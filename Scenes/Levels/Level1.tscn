@@ -12,6 +12,7 @@
 [node name="Level1" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
+starting_lives = 3
 
 [node name="Player" parent="." index="0" instance=ExtResource( 2 )]
 
@@ -48,8 +49,6 @@ tile_data = PoolIntArray( 196627, 7, 0, 262178, 7, 0, 262180, 7, 0, 262182, 7, 0
 _sections_unfolded = [ "Collision" ]
 
 [node name="Spikes" type="Node2D" parent="." index="2"]
-
-editor/display_folded = true
 
 [node name="SpikesTop" parent="Spikes" index="0" instance=ExtResource( 5 )]
 

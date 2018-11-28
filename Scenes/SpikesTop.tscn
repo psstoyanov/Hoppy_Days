@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Scenes/SpikesTop.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/hazards.gd" type="Script" id=1]
 [ext_resource path="res://GFX/Environment/spikes_top.png" type="Texture" id=2]
 
 [node name="SpikesTop" type="Area2D"]
@@ -31,6 +31,6 @@ modulate = Color( 0.96875, 0.7214, 0.295116, 1 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Pause", "Region", "Transform", "Visibility", "Z Index" ]
 
-[connection signal="body_entered" from="." to="." method="_on_SpikesTop_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 
 

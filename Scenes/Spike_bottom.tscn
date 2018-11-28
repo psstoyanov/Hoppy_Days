@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Spike_bottom.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/hazards.gd" type="Script" id=1]
 [ext_resource path="res://GFX/Environment/spike_bottom.png" type="Texture" id=2]
 
-[node name="Spike_bottom" type="Area2D"]
+[node name="Spike_bottom" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -27,6 +27,6 @@ _sections_unfolded = [ "Visibility" ]
 build_mode = 0
 polygon = PoolVector2Array( -25.4008, -43.1615, 25.6021, -43.3081, 3.32498, 42.8693, -2.97711, 42.8693 )
 
-[connection signal="body_entered" from="." to="." method="_on_Spike_bottom_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 
 

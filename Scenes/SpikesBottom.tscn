@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://SpikesBottom.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/hazards.gd" type="Script" id=1]
 [ext_resource path="res://GFX/Environment/spikes_bottom.png" type="Texture" id=2]
 
 [node name="SpikesBottom" type="Area2D"]
@@ -27,6 +27,6 @@ _sections_unfolded = [ "Animation", "Material", "Offset", "Pause", "Region", "Tr
 build_mode = 0
 polygon = PoolVector2Array( -46.4481, -26.1281, -33.0884, 26.2465, 33.0006, 26.3648, 46.8331, -26.2463 )
 
-[connection signal="body_entered" from="." to="." method="_on_SpikesBottom_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 
 
