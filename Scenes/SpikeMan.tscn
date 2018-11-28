@@ -68,7 +68,7 @@ tracks/2/keys = {
 "values": [ true, false, true, false ]
 }
 
-[node name="SpikeMan" type="Node2D" index="0"]
+[node name="SpikeMan" type="Node2D"]
 
 __meta__ = {
 "_edit_group_": true
@@ -76,7 +76,7 @@ __meta__ = {
 
 [node name="Area2D" type="Area2D" parent="." index="0"]
 
-position = Vector2( -33.3643, 0 )
+position = Vector2( 100, 0 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -91,10 +91,8 @@ _sections_unfolded = [ "Collision", "Transform" ]
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Area2D" index="0"]
 
 frames = SubResource( 1 )
-animation = "walk"
-frame = 1
+animation = "idle"
 playing = true
-flip_h = true
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="1"]
